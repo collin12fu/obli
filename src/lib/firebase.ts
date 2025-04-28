@@ -5,7 +5,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 // Firebase configuration from the Firebase Console
 const firebaseConfig = {
-  apiKey: '',
+  apiKey: 'AIzaSyATrnNYY9GwwpJGXTFq2hevpyKs4fuyIyE',
   authDomain: 'obli-3d059.firebaseapp.com',
   projectId: 'obli-3d059',
   storageBucket: 'obli-3d059.firebasestorage.app',
