@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ----------------------------- */
+/* Custom Keyframes + Animations */
+/* ----------------------------- */
+
+/* Shimmer: sliding shine effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotate(15deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(15deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(15deg);
+  }
+}
+
+/* Glow pulse: smooth breathing light */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Button intense glowing pulse */
+@keyframes pulseGlowButton {
+  0% {
+    box-shadow: 0 0 10px rgba(203, 170, 111, 0.8), 0 0 20px rgba(203, 170, 111, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(203, 170, 111, 0.9), 0 0 40px rgba(203, 170, 111, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(203, 170, 111, 0.8), 0 0 20px rgba(203, 170, 111, 0.6);
+  }
+}
+
+/* Simple fade-in entrance (translateY from bottom) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse scale effect (for subtle hover animations) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* -------------------------------- */
+/* Custom Utility Classes           */
+/* -------------------------------- */
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background-size: 200% 200%;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.animate-pulse-glow-button {
+  animation: pulseGlowButton 2s infinite ease-in-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
